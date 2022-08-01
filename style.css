@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", serif;
+}
+
+body {
+    margin: 50px;
+    width: fit-content;
+}
+/*!Checkbox styling  */
+.checkbox {
+    margin: 0 20px;
+    align-self: right;
+}
+
+.toggle {
+    --width: 38px;
+    --height: calc(var(--width) / 2);
+    --border-radius: calc(var(--height));
+
+    display: inline-block;
+    cursor: pointer;
+}
+
+.toggle--input {
+    display: none;
+}
+
+.toggle--input:checked ~ .toggle--fill {
+    background-color: #f2e5ff;
+}
+
+.toggle--fill {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #fff;
+    border: 1px solid #052233;
+    transition: background 0.2s;
+}
+
+.toggle--fill::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background: #052233;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+.toggle--input:checked ~ .toggle--fill::after {
+    transform: translateX(var(--height));
+}
+
+.container--choices > div {
+    display: flex;
+    margin-bottom: 14px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container--choices {
+    width: 540px;
+    margin-top: 52px;
+    /* display: none; */
+}
+
+label input[type="text"] {
+    height: auto;
+    font-size: 26px;
+    width: 400px;
+    border: none;
+    background-color: #efe3fb;
+    padding: 8px 16px;
+}
+
+input[type="number"] {
+    font-size: 14px;
+    margin-right: 20px;
+}
+.icon {
+    height: 32px;
+}
+
+.icon--clipboard:hover {
+    cursor: pointer;
+}
+
+.icon--clipboard-background {
+    background-color: #efe3fb;
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container--password {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    /* border: 1.5px solid #0c4a6e; */
+    padding: 8px 16px;
+    gap: 8px;
+    margin: 0 auto;
+}
+
+.password-text {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.display-text {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 24px;
+}
+
+.copyright {
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 12px 24px;
+}
+
+.profile-link:link,
+.profile-link:visited {
+    text-decoration: none;
+}
+
+.container--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.btn--generate-password {
+    font-size: 24px;
+    height: 32px;
+    padding: 0 8px;
+    background-color: #efe3fb;
+    border: 1px solid #052233;
+    cursor: pointer;
+}
+
+.btn--generate-password:hover {
+    background-color: #ecdcfc;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e5caff;
+    padding: 24px 32px;
+    box-shadow: 0 0 24px #c7c7c7;
+}
+
+.copied-text {
+    display: block;
+    width: fit-content;
+    padding: 4px 8px;
+    background-color: #f2e5ff;
+}
+
+.copied-text--hidden {
+    display: none;
+}

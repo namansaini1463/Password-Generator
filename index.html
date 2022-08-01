@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="images/website-icon.png" />
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="images/lock.svg" alt="lock-icon" class="icon" />
+                <h3 class="password-text">Password Generator</h3>
+                <img src="images/lock.svg" alt="lock-icon" class="icon" />
+            </div>
+
+            <div class="container--password">
+                <div>
+                    <label for="generated--password">
+                        <input
+                            type="text"
+                            id="generated-password"
+                            class="generated-password"
+                            placeholder="*your password here*"
+                            spellcheck="false "
+                        />
+                    </label>
+                </div>
+                <div class="icon--clipboard-background" title="Click to Copy">
+                    <img
+                        src="images/clipboard.svg"
+                        alt="clipboard"
+                        class="icon icon--clipboard"
+                    />
+                </div>
+                <div class="copied-text copied-text--hidden">Copied!</div>
+            </div>
+
+            <div class="container--choices">
+                <div class="container--password-length">
+                    <p class="display-text">Password length</p>
+                    <input
+                        type="number"
+                        min="1"
+                        max="24"
+                        value="12"
+                        class="password-length"
+                    />
+                </div>
+                <div class="container--lowercase">
+                    <p class="display-text">Include lowercase</p>
+                    <label
+                        for="lowercase"
+                        class="toggle checkbox checkbox--lowercase"
+                    >
+                        <input
+                            class="toggle--input"
+                            type="checkbox"
+                            id="lowercase"
+                            checked
+                        />
+                        <div class="toggle--fill"></div>
+                    </label>
+                </div>
+                <div class="container--uppercase">
+                    <p class="display-text">Include uppercase</p>
+                    <label
+                        for="uppercase"
+                        class="toggle checkbox checkbox--uppercase"
+                    >
+                        <input
+                            class="toggle--input"
+                            type="checkbox"
+                            id="uppercase"
+                        />
+
+                        <div class="toggle--fill"></div>
+                    </label>
+                </div>
+                <div class="container--numbers">
+                    <p class="display-text">Include numbers</p>
+                    <label
+                        for="numbers"
+                        class="toggle checkbox checkbox--numbers"
+                    >
+                        <input
+                            class="toggle--input"
+                            type="checkbox"
+                            id="numbers"
+                            checked
+                        />
+                        <div class="toggle--fill"></div>
+                    </label>
+                </div>
+                <div class="container--symbols">
+                    <p class="display-text">Include symbols</p>
+                    <label
+                        for="symbols"
+                        class="toggle checkbox checkbox--symbols"
+                    >
+                        <input
+                            class="toggle--input"
+                            type="checkbox"
+                            id="symbols"
+                        />
+                        <div class="toggle--fill"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="container--btn">
+                <button class="btn--generate-password">
+                    Generate password
+                </button>
+            </div>
+        </div>
+    </body>
+    <footer class="copyright">
+        <p>
+            &copy;
+            <a
+                href="https://github.com/namansaini1463"
+                class="profile-link"
+                target="_blank"
+            >
+                Naman Saini
+            </a>
+        </p>
+    </footer>
+</html>
